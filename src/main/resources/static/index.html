@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>TicTacToe</title>
+    <link href="css/tictactoe.css"
+          th:href="@{/css/tictactoe.css}"
+          rel="stylesheet" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script type="text/javascript" src="js/tictactoe.js"
+            th:src="@{/js/tictactoe.js}"></script>
+</head>
+<body ng-controller="displayPageController">
+    <div id="title">TIC TAC TOE</div>
+    <div id="player-1">PLAYER X<br/>
+        {{gameBoardDto.player1}}
+    </div>
+    <div id="game">
+        <div id="top-left" ng-click="playPage('topLeft')"><span class="glow">{{gameBoardDto.topLeft}}</span></div>
+        <div id="top" ng-click="playPage('top')"><span class="glow">{{gameBoardDto.top}}</span></div>
+        <div id="top-right" ng-click="playPage('topRight')"><span class="glow">{{gameBoardDto.topRight}}</span></div>
+        <div id="left" ng-click="playPage('left')"><span class="glow">{{gameBoardDto.left}}</span></div>
+        <div id="middle" ng-click="playPage('middle')"><span class="glow">{{gameBoardDto.middle}}</span></div>
+        <div id="right" ng-click="playPage('right')"><span class="glow">{{gameBoardDto.right}}</span></div>
+        <div id="bottom-left" ng-click="playPage('bottomLeft')"><span class="glow">{{gameBoardDto.bottomLeft}}</span></div>
+        <div id="bottom" ng-click="playPage('bottom')"><span class="glow">{{gameBoardDto.bottom}}</span></div>
+        <div id="bottom-right" ng-click="playPage('bottomRight')"><span class="glow">{{gameBoardDto.bottomRight}}</span></div>
+    </div>
+    <div id="player-2">PLAYER O<br/>
+        {{gameBoardDto.player2}}
+    </div>
+</body>
+</html>
